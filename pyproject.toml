@@ -1,8 +1,8 @@
 [project]
-name = "PredictStudentsDepression_By_Group03"
+name = "student-depression-predictor"
 version = "0.1.0"
-description = "A brief description of your project."
+description = "A machine learning model to predict depression risk in university students"
 authors = [
     {name = "Amanda", email = "amaseww@gmail.com"}
 ]
-requires-python = ">=3.9"
+requires-python = ">=3.10"
