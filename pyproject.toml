@@ -1,0 +1,8 @@
+[project]
+name = "PredictStudentsDepression_By_Group03"
+version = "0.1.0"
+description = "A brief description of your project."
+authors = [
+    {name = "Amanda", email = "amaseww@gmail.com"}
+]
+requires-python = ">=3.9"
