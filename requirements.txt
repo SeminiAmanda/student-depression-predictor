@@ -5,4 +5,5 @@ matplotlib
 seaborn
 jupyterlab
 joblib
+nbstripout
 # streamlit  # Commented out for now; will add later when building the web app interface
