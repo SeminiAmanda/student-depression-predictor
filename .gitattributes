@@ -1,2 +1,5 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+
+# Custom filter for Jupyter notebooks
+*.ipynb filter=nbstripout
