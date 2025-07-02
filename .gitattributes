@@ -3,3 +3,5 @@
 
 # Custom filter for Jupyter notebooks
 *.ipynb filter=nbstripout
+*.ipynb diff=ipynb
+*.ipynb merge=nbstripout
