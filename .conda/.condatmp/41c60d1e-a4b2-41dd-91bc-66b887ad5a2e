@@ -1,0 +1,13 @@
+prefix=c:/Users/user/Desktop/Desktop/semester 5/Introduction to machine learning/student-depression-predictor/.conda/Library
+exec_prefix=c:/Users/user/Desktop/Desktop/semester 5/Introduction to machine learning/student-depression-predictor/.conda/Library
+libdir=c:/Users/user/Desktop/Desktop/semester 5/Introduction to machine learning/student-depression-predictor/.conda/Library/lib
+sharedlibdir=c:/Users/user/Desktop/Desktop/semester 5/Introduction to machine learning/student-depression-predictor/.conda/Library/lib
+includedir=c:/Users/user/Desktop/Desktop/semester 5/Introduction to machine learning/student-depression-predictor/.conda/Library/include
+
+Name: zlib
+Description: zlib compression library
+Version: 1.2.13
+
+Requires:
+Libs: -L${libdir} -L${sharedlibdir} -lz
+Cflags: -I${includedir}
