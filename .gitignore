@@ -1,2 +1,17 @@
-# Ignore Jupyter Notebook checkpoints
-**/.ipynb_checkpoints/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python/
+env/
+venv/
+.env
+
+# Jupyter Notebook specific files
+.ipynb_checkpoints/
+
+# Conda related files
+.conda/
+.condatmp/
