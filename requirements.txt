@@ -1,6 +1,7 @@
 numpy
 pandas
 scikit-learn
+xgboost # mithula-cbw 2025.07.13
 matplotlib
 seaborn
 jupyterlab
