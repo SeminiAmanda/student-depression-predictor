@@ -15,12 +15,19 @@ venv/
 # Conda related files
 .conda/
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 .condatmp/
 =======
+=======
+>>>>>>> Stashed changes
 .condatmp/
 
 # Ignore data files
 *.csv
 *.json
+<<<<<<< Updated upstream
+data
+>>>>>>> Stashed changes
+=======
 data
 >>>>>>> Stashed changes
