@@ -16,11 +16,8 @@ venv/
 .conda/
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
-<<<<<<< Updated upstream
 .condatmp/
 =======
-=======
->>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 .condatmp/
@@ -29,10 +26,6 @@ venv/
 *.csv
 *.json
 <<<<<<< Updated upstream
-<<<<<<< Updated upstream
-data
->>>>>>> Stashed changes
-=======
 data
 >>>>>>> Stashed changes
 =======
