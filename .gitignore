@@ -15,3 +15,8 @@ venv/
 # Conda related files
 .conda/
 .condatmp/
+
+# Ignore data files
+*.csv
+*.json
+data
