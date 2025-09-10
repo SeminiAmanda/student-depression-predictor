@@ -1,4 +1,4 @@
-Gender,Age,Academic Pressure,CGPA,Study Satisfaction,Sleep Duration,Dietary Habits,Degree,Have you ever had suicidal thoughts ?,Work/Study Hours,Financial Stress,Family History of Mental Illness,Depression
+Gender,Age,Academic Pressure,CGPA,Study Satisfaction,Sleep Duration,Dietary Habits,Degree,Have you ever had suicidal thoughts ?,Study Hours,Financial Stress,Family History of Mental Illness,Depression
 Male,33.0,5.0,8.97,2.0,5.5,Healthy,B.Pharm,Yes,3.0,1.0,No,1
 Female,24.0,2.0,5.9,5.0,5.5,Moderate,BSc,No,3.0,2.0,Yes,0
 Male,31.0,3.0,7.03,5.0,5.0,Healthy,BA,No,9.0,1.0,Yes,0
@@ -112,7 +112,6 @@ Male,33.0,2.0,9.95,4.0,5.0,Moderate,M.Tech,No,0.0,2.0,No,0
 Female,18.0,5.0,9.79,5.0,5.0,Unhealthy,'Class 12',Yes,10.0,5.0,Yes,1
 Female,20.0,5.0,5.37,4.0,5.0,Moderate,'Class 12',Yes,12.0,3.0,Yes,1
 Female,19.0,3.0,6.86,4.0,5.0,Unhealthy,'Class 12',Yes,12.0,3.0,Yes,1
-Male,21.0,5.0,7.83,1.0,5.5,Healthy,MSc,Yes,11.0,3.0,Yes,1
 Male,32.0,2.0,8.32,1.0,5.0,Unhealthy,B.Tech,Yes,12.0,4.0,No,1
 Male,32.0,3.0,5.51,2.0,7.5,Moderate,LLB,Yes,7.0,4.0,Yes,1
 Male,33.0,3.0,9.74,1.0,5.0,Healthy,MD,No,5.0,1.0,Yes,0
@@ -421,7 +420,6 @@ Male,27.0,2.0,9.39,5.0,7.5,Unhealthy,MSc,Yes,6.0,1.0,Yes,0
 Female,31.0,3.0,9.87,3.0,7.5,Healthy,B.Ed,Yes,12.0,5.0,No,1
 Female,28.0,4.0,7.09,1.0,7.5,Healthy,BE,No,1.0,4.0,Yes,0
 Male,34.0,3.0,8.04,4.0,5.5,Healthy,MD,Yes,7.0,2.0,No,0
-Female,31.0,5.0,6.95,3.0,5.0,Moderate,BSc,No,8.0,1.0,Yes,1
 Male,20.0,3.0,8.58,1.0,7.5,Healthy,'Class 12',Yes,9.0,2.0,Yes,1
 Female,18.0,4.0,7.28,3.0,5.0,Moderate,'Class 12',Yes,8.0,5.0,No,1
 Female,20.0,4.0,6.21,1.0,7.5,Moderate,'Class 12',Yes,10.0,4.0,Yes,1
@@ -1844,7 +1842,6 @@ Male,28.0,4.0,5.25,2.0,5.5,Moderate,BA,Yes,1.0,4.0,Yes,1
 Male,25.0,2.0,7.09,4.0,8.0,Moderate,BE,Yes,8.0,1.0,Yes,0
 Female,27.0,3.0,5.87,5.0,7.5,Unhealthy,BHM,No,6.0,1.0,Yes,0
 Female,25.0,5.0,9.04,2.0,7.5,Moderate,B.Tech,No,12.0,1.0,No,1
-Female,32.0,3.0,9.6,2.0,7.5,Moderate,PhD,Yes,5.0,3.0,No,1
 Female,25.0,2.0,8.52,2.0,7.5,Unhealthy,B.Arch,No,10.0,5.0,No,0
 Male,31.0,2.0,5.86,1.0,5.0,Healthy,MBA,No,12.0,1.0,Yes,0
 Male,21.0,2.0,8.73,2.0,5.5,Moderate,MSc,Yes,12.0,5.0,No,1
@@ -2248,7 +2245,6 @@ Female,25.0,1.0,7.64,3.0,7.5,Unhealthy,LLB,Yes,9.0,2.0,No,0
 Female,21.0,1.0,8.53,4.0,5.0,Healthy,B.Com,Yes,12.0,5.0,Yes,1
 Female,30.0,3.0,6.1,2.0,5.0,Unhealthy,LLB,No,10.0,4.0,No,0
 Male,28.0,4.0,5.39,2.0,5.5,Healthy,B.Pharm,Yes,6.0,5.0,Yes,1
-Female,28.0,5.0,9.72,3.0,8.0,Healthy,MA,Yes,10.0,5.0,Yes,1
 Male,27.0,3.0,7.07,5.0,5.5,Healthy,LLB,Yes,4.0,3.0,No,0
 Male,31.0,4.0,8.64,2.0,8.0,Unhealthy,M.Com,Yes,3.0,1.0,Yes,1
 Male,21.0,1.0,6.99,4.0,5.0,Healthy,MCA,No,8.0,3.0,No,0
@@ -2439,7 +2435,6 @@ Female,21.0,1.0,9.79,2.0,8.0,Unhealthy,M.Com,No,11.0,2.0,Yes,0
 Male,24.0,1.0,9.24,5.0,5.0,Moderate,LLB,No,6.0,2.0,No,0
 Female,21.0,5.0,5.74,2.0,5.0,Unhealthy,B.Com,Yes,4.0,1.0,Yes,1
 Female,31.0,2.0,8.04,5.0,7.5,Healthy,LLM,Yes,2.0,5.0,Yes,0
-Male,25.0,5.0,8.5,2.0,5.5,Moderate,B.Ed,Yes,0.0,2.0,Yes,1
 Female,20.0,5.0,7.77,1.0,5.5,Moderate,'Class 12',Yes,1.0,5.0,Yes,1
 Female,24.0,3.0,8.04,1.0,8.0,Unhealthy,BSc,Yes,12.0,2.0,No,1
 Male,30.0,4.0,8.74,3.0,5.5,Healthy,B.Com,No,4.0,1.0,No,0
@@ -3219,7 +3214,6 @@ Male,33.0,3.0,6.1,4.0,8.0,Unhealthy,M.Pharm,No,11.0,3.0,Yes,0
 Male,29.0,3.0,8.7,5.0,8.0,Healthy,BE,Yes,9.0,2.0,Yes,0
 Female,28.0,1.0,7.15,5.0,8.0,Moderate,B.Ed,Yes,11.0,4.0,No,0
 Female,32.0,2.0,8.62,5.0,8.0,Moderate,M.Pharm,No,10.0,1.0,No,0
-Male,33.0,2.0,7.13,4.0,8.0,Moderate,MSc,No,2.0,5.0,Yes,1
 Male,28.0,4.0,5.27,2.0,5.5,Unhealthy,BSc,Yes,10.0,5.0,Yes,1
 Female,20.0,3.0,5.27,3.0,5.5,Unhealthy,'Class 12',Yes,2.0,5.0,Yes,1
 Female,18.0,4.0,7.09,3.0,8.0,Healthy,'Class 12',No,6.0,5.0,Yes,1
@@ -3387,7 +3381,6 @@ Female,29.0,3.0,5.57,2.0,8.0,Unhealthy,MBA,No,6.0,1.0,Yes,1
 Male,23.0,3.0,5.88,4.0,8.0,Unhealthy,BCA,Yes,6.0,3.0,No,1
 Male,34.0,3.0,7.64,4.0,5.5,Moderate,BSc,No,4.0,3.0,No,0
 Female,27.0,1.0,7.38,3.0,5.5,Healthy,B.Arch,Yes,4.0,5.0,No,1
-Female,24.0,3.0,8.89,5.0,8.0,Unhealthy,MSc,Yes,3.0,5.0,Yes,1
 Male,20.0,3.0,6.83,3.0,5.0,Healthy,'Class 12',No,9.0,5.0,No,1
 Female,22.0,5.0,5.64,3.0,5.0,Moderate,MSc,Yes,12.0,1.0,Yes,1
 Male,26.0,1.0,5.88,3.0,5.5,Moderate,BCA,No,10.0,4.0,Yes,0
@@ -3638,7 +3631,6 @@ Female,22.0,4.0,5.57,2.0,5.0,Unhealthy,BCA,Yes,11.0,5.0,No,1
 Male,31.0,5.0,9.69,4.0,5.5,Healthy,MHM,Yes,7.0,3.0,Yes,1
 Female,26.0,3.0,8.04,1.0,8.0,Unhealthy,MSc,No,11.0,5.0,No,1
 Male,20.0,3.0,8.71,4.0,5.5,Unhealthy,'Class 12',No,0.0,3.0,No,0
-Male,32.0,3.0,5.74,4.0,7.5,Healthy,B.Ed,Yes,3.0,5.0,Yes,1
 Male,25.0,3.0,9.72,4.0,7.5,Moderate,M.Com,Yes,1.0,1.0,No,0
 Male,29.0,5.0,6.16,5.0,8.0,Unhealthy,LLB,No,2.0,1.0,Yes,0
 Female,26.0,3.0,9.97,2.0,5.0,Unhealthy,BE,Yes,12.0,2.0,Yes,1
@@ -3840,7 +3832,6 @@ Female,24.0,1.0,7.83,3.0,5.0,Unhealthy,M.Tech,No,4.0,1.0,No,0
 Male,25.0,4.0,8.73,4.0,5.0,Unhealthy,B.Tech,No,0.0,2.0,Yes,1
 Female,27.0,5.0,5.74,4.0,5.5,Healthy,B.Arch,No,8.0,4.0,Yes,0
 Female,30.0,1.0,9.95,3.0,5.0,Unhealthy,LLM,No,9.0,2.0,No,1
-Male,31.0,3.0,7.48,5.0,5.5,Unhealthy,MD,Yes,12.0,2.0,Yes,1
 Female,20.0,5.0,5.45,3.0,5.0,Unhealthy,'Class 12',Yes,9.0,2.0,No,1
 Female,30.0,5.0,8.96,1.0,5.0,Moderate,M.Pharm,Yes,12.0,3.0,No,1
 Male,32.0,5.0,9.79,1.0,7.5,Unhealthy,B.Arch,Yes,5.0,5.0,Yes,1
@@ -5015,7 +5006,6 @@ Female,29.0,4.0,8.95,2.0,7.5,Moderate,M.Ed,Yes,10.0,2.0,Yes,1
 Male,19.0,2.0,9.93,5.0,8.0,Unhealthy,'Class 12',Yes,4.0,1.0,Yes,0
 Male,33.0,4.0,6.36,4.0,5.5,Unhealthy,M.Tech,Yes,12.0,5.0,Yes,0
 Female,19.0,4.0,6.37,1.0,7.5,Moderate,'Class 12',Yes,10.0,5.0,Yes,1
-Male,24.0,4.0,9.66,5.0,7.5,Moderate,BE,Yes,12.0,3.0,No,1
 Female,21.0,1.0,9.86,3.0,7.5,Healthy,MCA,No,6.0,4.0,No,0
 Female,26.0,1.0,5.56,2.0,7.5,Moderate,M.Ed,Yes,5.0,4.0,No,0
 Female,20.0,5.0,8.25,5.0,7.5,Unhealthy,'Class 12',No,3.0,5.0,Yes,1
@@ -8532,7 +8522,6 @@ Male,33.0,3.0,9.86,5.0,7.5,Moderate,LLM,Yes,0.0,4.0,No,1
 Male,23.0,4.0,5.76,2.0,8.0,Unhealthy,BSc,Yes,5.0,1.0,Yes,1
 Female,30.0,1.0,9.86,1.0,7.5,Unhealthy,B.Arch,No,2.0,2.0,Yes,0
 Male,25.0,3.0,6.99,5.0,5.5,Healthy,MA,No,12.0,3.0,No,0
-Male,23.0,3.0,8.62,2.0,8.0,Healthy,BHM,No,9.0,5.0,No,1
 Female,29.0,4.0,8.59,3.0,5.5,Unhealthy,B.Pharm,Yes,10.0,4.0,Yes,1
 Female,25.0,3.0,9.39,3.0,5.0,Moderate,B.Ed,Yes,6.0,3.0,Yes,1
 Male,22.0,1.0,6.86,4.0,8.0,Moderate,MBA,No,2.0,1.0,Yes,0
@@ -12118,7 +12107,6 @@ Female,28.0,5.0,6.51,1.0,8.0,Moderate,MBBS,Yes,0.0,4.0,Yes,1
 Male,33.0,4.0,5.74,5.0,5.0,Unhealthy,MSc,Yes,5.0,4.0,No,0
 Male,29.0,2.0,6.51,4.0,5.5,Healthy,ME,Yes,8.0,3.0,No,1
 Female,25.0,2.0,9.93,2.0,5.0,Healthy,BCA,No,4.0,1.0,Yes,0
-Female,23.0,3.0,9.91,4.0,7.5,Healthy,BHM,Yes,10.0,3.0,No,1
 Male,24.0,2.0,8.25,1.0,5.0,Unhealthy,BSc,Yes,9.0,5.0,Yes,1
 Female,33.0,1.0,9.67,4.0,8.0,Moderate,B.Ed,No,0.0,2.0,Yes,0
 Female,23.0,1.0,5.56,4.0,5.0,Healthy,BCA,Yes,4.0,1.0,Yes,0
@@ -12344,7 +12332,6 @@ Male,23.0,1.0,6.89,1.0,7.5,Unhealthy,B.Arch,Yes,8.0,1.0,Yes,0
 Male,28.0,3.0,6.27,4.0,5.5,Unhealthy,BCA,Yes,4.0,1.0,Yes,0
 Male,31.0,3.0,9.41,2.0,5.5,Healthy,'Class 12',Yes,12.0,1.0,Yes,0
 Female,31.0,2.0,7.75,2.0,5.5,Unhealthy,M.Tech,Yes,10.0,5.0,No,1
-Female,34.0,5.0,6.83,4.0,7.5,Moderate,MA,Yes,5.0,5.0,No,1
 Female,36.0,1.0,9.63,5.0,5.5,Moderate,B.Com,No,0.0,4.0,Yes,0
 Female,22.0,1.0,9.84,4.0,5.0,Healthy,BHM,Yes,7.0,4.0,No,1
 Male,33.0,2.0,7.43,3.0,5.5,Moderate,BE,Yes,10.0,4.0,Yes,1
@@ -14344,7 +14331,6 @@ Female,34.0,3.0,5.17,2.0,5.0,Healthy,BCA,No,4.0,1.0,Yes,0
 Female,23.0,4.0,6.21,2.0,5.0,Healthy,BSc,Yes,10.0,3.0,No,1
 Female,31.0,5.0,5.47,3.0,5.0,Unhealthy,B.Ed,Yes,10.0,4.0,No,1
 Male,20.0,3.0,6.1,4.0,5.5,Unhealthy,'Class 12',No,8.0,4.0,Yes,1
-Female,28.0,3.0,6.99,3.0,5.5,Moderate,BSc,Yes,10.0,5.0,Yes,1
 Male,29.0,4.0,7.1,5.0,5.0,Unhealthy,PhD,Yes,5.0,5.0,Yes,1
 Male,22.0,1.0,5.79,2.0,8.0,Moderate,B.Com,No,2.0,4.0,Yes,0
 Male,30.0,5.0,5.11,3.0,5.5,Moderate,BSc,No,7.0,5.0,No,1
@@ -15462,7 +15448,6 @@ Female,22.0,4.0,8.04,2.0,7.5,Healthy,MCA,No,3.0,1.0,No,0
 Male,22.0,5.0,8.23,2.0,5.5,Unhealthy,B.Tech,Yes,1.0,4.0,Yes,1
 Male,29.0,2.0,9.39,1.0,5.0,Healthy,M.Ed,No,1.0,4.0,Yes,0
 Male,31.0,3.0,7.26,1.0,5.5,Healthy,MA,Yes,12.0,3.0,No,1
-Male,32.0,5.0,9.7,3.0,5.0,Healthy,M.Pharm,Yes,3.0,4.0,No,1
 Male,18.0,4.0,6.5,4.0,8.0,Moderate,'Class 12',No,6.0,2.0,No,0
 Female,21.0,3.0,8.1,4.0,5.0,Healthy,B.Arch,Yes,11.0,1.0,No,1
 Male,19.0,2.0,8.04,2.0,5.0,Healthy,'Class 12',Yes,12.0,1.0,Yes,1
@@ -16098,7 +16083,6 @@ Male,33.0,3.0,6.46,1.0,8.0,Moderate,MCA,Yes,11.0,3.0,Yes,0
 Male,23.0,5.0,8.73,2.0,5.0,Healthy,BA,Yes,12.0,1.0,No,0
 Male,19.0,1.0,7.92,5.0,5.0,Unhealthy,'Class 12',Yes,2.0,5.0,No,1
 Female,18.0,5.0,6.75,1.0,7.5,Unhealthy,'Class 12',Yes,9.0,4.0,Yes,1
-Male,23.0,4.0,6.88,1.0,8.0,Unhealthy,LLM,Yes,2.0,4.0,No,1
 Female,29.0,3.0,8.61,4.0,5.5,Healthy,M.Com,No,10.0,5.0,No,0
 Female,34.0,4.0,7.88,2.0,5.0,Moderate,B.Arch,Yes,6.0,4.0,Yes,1
 Male,20.0,2.0,5.6,5.0,8.0,Healthy,'Class 12',Yes,8.0,3.0,Yes,1
@@ -17540,7 +17524,6 @@ Male,25.0,5.0,8.95,1.0,5.5,Unhealthy,M.Pharm,Yes,10.0,4.0,No,1
 Male,20.0,5.0,7.51,4.0,5.0,Healthy,'Class 12',Yes,3.0,5.0,No,1
 Female,28.0,4.0,9.24,3.0,5.0,Healthy,MSc,Yes,5.0,5.0,Yes,1
 Male,33.0,2.0,9.84,5.0,8.0,Unhealthy,'Class 12',Yes,8.0,3.0,No,0
-Female,29.0,2.0,6.86,3.0,7.5,Moderate,BHM,Yes,12.0,4.0,Yes,1
 Female,34.0,1.0,7.8,4.0,5.0,Moderate,M.Tech,No,9.0,1.0,No,0
 Male,19.0,4.0,7.09,3.0,8.0,Unhealthy,'Class 12',Yes,11.0,3.0,No,1
 Male,30.0,3.0,5.74,4.0,5.0,Moderate,B.Ed,No,2.0,1.0,No,0
@@ -17575,7 +17558,6 @@ Male,27.0,5.0,5.74,3.0,5.0,Unhealthy,LLM,Yes,0.0,3.0,Yes,1
 Female,23.0,5.0,7.8,3.0,5.5,Unhealthy,BHM,No,7.0,4.0,No,1
 Male,29.0,2.0,8.74,5.0,7.5,Moderate,MBBS,Yes,10.0,2.0,No,1
 Male,19.0,1.0,8.91,5.0,7.5,Unhealthy,'Class 12',Yes,12.0,3.0,No,0
-Female,29.0,3.0,6.35,3.0,5.0,Healthy,MD,No,12.0,1.0,No,1
 Male,24.0,5.0,9.94,3.0,5.5,Moderate,MBBS,Yes,11.0,5.0,Yes,1
 Male,25.0,2.0,9.63,4.0,5.5,Healthy,BHM,Yes,2.0,4.0,Yes,1
 Female,31.0,1.0,6.08,3.0,5.5,Unhealthy,M.Pharm,Yes,3.0,1.0,No,0
@@ -18203,7 +18185,6 @@ Male,21.0,3.0,8.04,2.0,5.0,Moderate,BA,Yes,2.0,5.0,No,1
 Female,32.0,3.0,7.94,3.0,8.0,Moderate,B.Ed,Yes,10.0,5.0,No,1
 Male,34.0,5.0,9.63,1.0,8.0,Healthy,M.Ed,No,9.0,5.0,Yes,1
 Female,25.0,5.0,7.92,2.0,5.0,Moderate,B.Ed,Yes,10.0,1.0,Yes,1
-Male,26.0,4.0,7.28,3.0,8.0,Healthy,BSc,No,12.0,4.0,Yes,0
 Male,22.0,3.0,6.29,1.0,7.5,Moderate,M.Pharm,Yes,0.0,2.0,No,1
 Male,34.0,1.0,5.32,4.0,8.0,Healthy,B.Ed,No,4.0,1.0,No,0
 Male,34.0,2.0,9.92,5.0,5.5,Healthy,B.Ed,Yes,10.0,3.0,Yes,0
@@ -20558,7 +20539,6 @@ Male,24.0,1.0,8.81,5.0,8.0,Moderate,BSc,No,4.0,2.0,Yes,0
 Male,19.0,3.0,9.56,5.0,5.0,Healthy,'Class 12',No,8.0,4.0,Yes,1
 Male,18.0,1.0,5.12,3.0,7.5,Moderate,'Class 12',No,5.0,1.0,No,0
 Female,21.0,2.0,8.53,5.0,8.0,Unhealthy,M.Ed,Yes,9.0,2.0,Yes,0
-Male,28.0,1.0,9.41,5.0,5.5,Healthy,BA,Yes,5.0,3.0,Yes,0
 Male,24.0,3.0,8.69,3.0,7.5,Unhealthy,B.Tech,Yes,10.0,4.0,Yes,1
 Female,31.0,1.0,6.78,4.0,5.5,Moderate,B.Com,No,4.0,3.0,No,0
 Male,28.0,5.0,8.04,1.0,5.0,Unhealthy,B.Ed,No,2.0,2.0,No,0
@@ -20791,7 +20771,6 @@ Female,20.0,3.0,9.72,5.0,5.0,Moderate,'Class 12',Yes,0.0,5.0,Yes,1
 Female,31.0,1.0,6.75,5.0,8.0,Unhealthy,BA,No,0.0,1.0,No,0
 Female,18.0,4.0,6.08,5.0,8.0,Healthy,'Class 12',Yes,7.0,1.0,No,0
 Female,27.0,3.0,7.1,2.0,5.5,Healthy,BSc,Yes,12.0,2.0,No,1
-Female,21.0,3.0,8.17,5.0,5.0,Moderate,MCA,Yes,4.0,3.0,No,1
 Female,24.0,2.0,6.99,1.0,8.0,Unhealthy,B.Com,No,10.0,4.0,Yes,1
 Female,27.0,4.0,9.21,1.0,5.0,Healthy,B.Com,No,12.0,3.0,Yes,1
 Male,26.0,5.0,8.47,2.0,5.0,Moderate,B.Pharm,No,12.0,5.0,No,1
@@ -20862,7 +20841,6 @@ Female,30.0,5.0,9.21,4.0,5.0,Moderate,B.Ed,Yes,3.0,5.0,Yes,1
 Female,23.0,1.0,7.88,4.0,8.0,Healthy,B.Ed,Yes,11.0,5.0,No,1
 Male,34.0,4.0,8.61,4.0,5.0,Healthy,MBBS,No,8.0,5.0,No,0
 Male,32.0,5.0,8.59,2.0,7.5,Moderate,B.Ed,Yes,9.0,5.0,No,1
-Male,28.0,3.0,5.82,4.0,5.5,Moderate,MD,Yes,5.0,1.0,No,0
 Female,31.0,5.0,5.57,3.0,5.5,Moderate,B.Ed,No,3.0,2.0,No,0
 Male,23.0,1.0,5.74,1.0,5.0,Healthy,B.Arch,No,3.0,3.0,Yes,0
 Female,28.0,1.0,5.37,3.0,5.0,Unhealthy,MBA,No,10.0,2.0,No,0
@@ -22168,7 +22146,6 @@ Male,23.0,2.0,8.04,1.0,5.5,Unhealthy,BCA,Yes,10.0,1.0,No,1
 Male,19.0,5.0,5.65,1.0,7.5,Unhealthy,'Class 12',Yes,8.0,5.0,Yes,1
 Male,19.0,1.0,9.41,4.0,7.5,Moderate,'Class 12',No,4.0,1.0,No,0
 Male,27.0,2.0,8.73,3.0,5.5,Moderate,M.Tech,No,10.0,1.0,No,0
-Male,24.0,5.0,7.09,4.0,5.0,Unhealthy,BBA,Yes,1.0,3.0,Yes,1
 Male,29.0,2.0,8.04,5.0,5.5,Healthy,LLB,No,2.0,5.0,No,0
 Male,24.0,1.0,9.02,2.0,8.0,Moderate,BCA,Yes,7.0,2.0,Yes,0
 Male,27.0,5.0,8.95,1.0,8.0,Unhealthy,B.Com,Yes,4.0,5.0,No,1
@@ -24109,7 +24086,6 @@ Female,29.0,3.0,6.37,4.0,5.0,Healthy,M.Pharm,Yes,12.0,3.0,No,1
 Female,18.0,5.0,9.34,4.0,5.0,Unhealthy,'Class 12',Yes,8.0,5.0,No,1
 Male,24.0,3.0,9.74,4.0,5.5,Healthy,BBA,Yes,11.0,4.0,Yes,1
 Male,29.0,2.0,9.56,3.0,7.5,Healthy,MA,Yes,11.0,4.0,Yes,1
-Male,27.0,3.0,5.89,3.0,5.0,Unhealthy,MSc,Yes,2.0,5.0,No,1
 Male,28.0,5.0,8.91,2.0,5.0,Unhealthy,BCA,Yes,7.0,5.0,Yes,1
 Male,25.0,3.0,9.39,5.0,7.5,Unhealthy,M.Pharm,Yes,0.0,5.0,No,0
 Male,33.0,4.0,9.89,5.0,5.5,Moderate,B.Pharm,No,8.0,3.0,Yes,0
@@ -24470,7 +24446,6 @@ Male,20.0,4.0,8.53,5.0,7.5,Moderate,'Class 12',No,3.0,4.0,No,0
 Male,28.0,3.0,6.26,3.0,5.0,Moderate,B.Com,No,8.0,3.0,No,1
 Male,33.0,5.0,7.14,2.0,8.0,Unhealthy,B.Ed,No,3.0,3.0,No,0
 Male,23.0,3.0,6.17,4.0,5.5,Moderate,BCA,Yes,6.0,3.0,Yes,1
-Male,23.0,3.0,5.59,1.0,8.0,Healthy,BCA,Yes,11.0,4.0,Yes,1
 Female,33.0,4.0,5.79,4.0,7.5,Unhealthy,LLM,No,9.0,5.0,No,1
 Male,20.0,1.0,7.85,5.0,8.0,Moderate,'Class 12',No,11.0,4.0,No,0
 Male,21.0,4.0,5.16,1.0,5.5,Moderate,B.Ed,Yes,10.0,2.0,No,1
@@ -25207,7 +25182,6 @@ Male,31.0,3.0,7.88,2.0,5.5,Unhealthy,M.Tech,Yes,3.0,5.0,Yes,1
 Male,32.0,3.0,6.02,3.0,7.5,Healthy,MD,Yes,6.0,3.0,Yes,0
 Female,22.0,5.0,5.99,2.0,5.5,Moderate,MCA,Yes,3.0,5.0,No,1
 Female,29.0,5.0,8.54,5.0,5.0,Moderate,BCA,Yes,11.0,4.0,Yes,1
-Male,32.0,4.0,8.54,1.0,7.5,Unhealthy,MBBS,Yes,2.0,5.0,Yes,1
 Female,18.0,5.0,6.27,5.0,5.0,Unhealthy,'Class 12',Yes,8.0,4.0,Yes,1
 Male,30.0,4.0,9.97,5.0,7.5,Unhealthy,M.Ed,Yes,11.0,4.0,No,1
 Female,30.0,5.0,8.93,2.0,5.0,Unhealthy,B.Com,No,6.0,4.0,Yes,1
@@ -25323,7 +25297,6 @@ Female,19.0,4.0,9.1,5.0,8.0,Moderate,'Class 12',Yes,11.0,5.0,Yes,1
 Male,28.0,3.0,7.02,3.0,5.0,Healthy,ME,No,0.0,1.0,Yes,0
 Female,28.0,4.0,7.25,2.0,5.0,Moderate,BCA,Yes,10.0,5.0,Yes,1
 Male,21.0,1.0,7.77,1.0,8.0,Moderate,B.Ed,Yes,1.0,2.0,No,0
-Female,25.0,5.0,8.98,3.0,8.0,Healthy,B.Arch,Yes,5.0,5.0,No,1
 Female,30.0,3.0,7.28,4.0,5.5,Healthy,LLB,Yes,12.0,5.0,No,0
 Male,29.0,4.0,10.0,4.0,5.0,Unhealthy,BCA,Yes,11.0,2.0,Yes,1
 Female,21.0,5.0,7.38,4.0,7.5,Unhealthy,B.Com,Yes,4.0,4.0,Yes,1
@@ -25677,7 +25650,6 @@ Female,25.0,4.0,6.46,5.0,5.0,Moderate,MHM,No,12.0,3.0,Yes,0
 Female,22.0,5.0,8.91,1.0,5.0,Moderate,B.Com,Yes,8.0,2.0,Yes,1
 Female,20.0,3.0,9.89,3.0,7.5,Unhealthy,'Class 12',Yes,6.0,5.0,No,1
 Male,33.0,5.0,8.74,3.0,5.0,Unhealthy,BHM,Yes,6.0,1.0,No,1
-Female,21.0,5.0,6.91,4.0,5.0,Moderate,M.Com,No,10.0,5.0,No,1
 Male,28.0,1.0,9.54,3.0,5.0,Unhealthy,M.Tech,Yes,4.0,1.0,Yes,0
 Male,23.0,4.0,10.0,3.0,5.0,Moderate,BSc,Yes,10.0,3.0,Yes,1
 Male,29.0,4.0,8.95,1.0,5.0,Unhealthy,MBBS,No,8.0,3.0,Yes,1
@@ -26276,7 +26248,6 @@ Male,19.0,1.0,8.7,1.0,5.5,Moderate,'Class 12',No,10.0,5.0,Yes,1
 Male,25.0,3.0,9.49,1.0,7.5,Moderate,BE,Yes,12.0,4.0,No,1
 Male,26.0,1.0,9.11,5.0,5.0,Unhealthy,BCA,Yes,7.0,1.0,Yes,0
 Male,32.0,4.0,6.16,4.0,5.0,Healthy,M.Tech,Yes,11.0,3.0,No,1
-Male,25.0,5.0,7.25,1.0,7.5,Unhealthy,B.Ed,Yes,1.0,1.0,Yes,1
 Male,18.0,5.0,6.38,4.0,7.5,Unhealthy,'Class 12',Yes,11.0,3.0,No,1
 Female,28.0,3.0,5.85,3.0,5.0,Healthy,BHM,No,10.0,2.0,Yes,0
 Male,20.0,3.0,6.16,2.0,8.0,Moderate,'Class 12',Yes,10.0,5.0,Yes,1
@@ -27096,7 +27067,6 @@ Male,33.0,5.0,9.39,1.0,5.0,Healthy,BE,No,12.0,3.0,No,1
 Female,26.0,4.0,5.39,4.0,5.5,Unhealthy,BBA,No,8.0,4.0,No,1
 Female,24.0,3.0,5.85,2.0,7.5,Moderate,MBBS,Yes,9.0,2.0,No,0
 Male,30.0,5.0,9.95,2.0,5.0,Unhealthy,BHM,Yes,2.0,5.0,No,1
-Male,29.0,4.0,5.77,4.0,8.0,Healthy,B.Pharm,Yes,4.0,2.0,No,1
 Female,34.0,4.0,8.42,5.0,5.0,Moderate,M.Com,No,7.0,3.0,Yes,0
 Male,30.0,5.0,5.85,2.0,8.0,Unhealthy,MSc,Yes,12.0,1.0,No,1
 Female,28.0,2.0,7.12,2.0,7.5,Moderate,BHM,Yes,10.0,4.0,No,0
@@ -27860,7 +27830,6 @@ Male,30.0,5.0,9.71,2.0,7.5,Unhealthy,M.Ed,Yes,9.0,5.0,No,1
 Female,25.0,2.0,8.7,5.0,5.5,Healthy,B.Ed,Yes,1.0,4.0,Yes,0
 Male,26.0,1.0,7.46,3.0,5.5,Unhealthy,MCA,No,12.0,2.0,No,0
 Male,34.0,4.0,5.12,5.0,7.5,Healthy,MD,Yes,4.0,4.0,Yes,0
-Female,22.0,3.0,9.13,4.0,7.5,Unhealthy,MCA,Yes,4.0,1.0,Yes,1
 Female,19.0,3.0,9.93,3.0,7.5,Unhealthy,'Class 12',Yes,4.0,5.0,No,1
 Female,23.0,3.0,5.38,4.0,7.5,Unhealthy,BSc,Yes,12.0,4.0,No,1
 Male,33.0,1.0,7.39,4.0,7.5,Unhealthy,BHM,No,12.0,2.0,No,0
