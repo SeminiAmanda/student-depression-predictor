@@ -17,5 +17,4 @@ venv/
 .condatmp/
 
 # Ignore data files
-*.csv
 *.json
