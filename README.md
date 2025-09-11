@@ -20,6 +20,7 @@ cd student-depression-predictor
 ## 🐳 2. Build the Docker Image
 
 > ✅ Make sure Docker Desktop is installed and running.
+
 Docker Compose will handle building the image and creating necessary folders.
 Run this command to build (needed the first time, or when requirements.txt changes):
 
