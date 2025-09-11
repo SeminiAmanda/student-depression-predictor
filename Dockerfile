@@ -6,7 +6,7 @@ WORKDIR /app
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy project
+# Copy project files
 COPY . .
 
 # Create necessary directories upfront
@@ -24,7 +24,7 @@ if [ ! -f models/Final/model_highrecall.pkl ]; then \
 fi && \
 # 3️⃣ Run tests if RUN_TESTS=true \
 if [ \"$RUN_TESTS\" = \"true\" ]; then \
-    python tests/test.py; \
+    python src/test.py; \
 fi && \
 # 4️⃣ Start Jupyter Lab if RUN_JUPYTER=true \
 if [ \"$RUN_JUPYTER\" = \"true\" ]; then \
