@@ -19,4 +19,3 @@ venv/
 # Ignore data files
 *.csv
 *.json
-data

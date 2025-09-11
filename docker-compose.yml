@@ -3,8 +3,9 @@ services:
   ml-project:
     build: .
     ports:
-      - "8888:8888"
+      - "8888:8888"   # map Jupyter Lab port (optional)
     volumes:
-      - .:/app
+      - .:/app        # mount project folder
     working_dir: /app
-    command: jupyter-lab --ip=0.0.0.0 --allow-root --no-browser
+    environment:
+      - RUN_JUPYTER=false   # default: skip Jupyter Lab
