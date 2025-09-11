@@ -91,7 +91,7 @@ df_encoded.loc[:, 'cgpa'] = df_encoded['cgpa'].replace(0, np.nan)
 # =====================================
 # Save cleaned data
 # =====================================
-output_dir = "Data/processed/final"
+output_dir = "Data/processed/Final"
 os.makedirs(output_dir, exist_ok=True)
 df_encoded.to_csv(f"{output_dir}/clean_data.csv", index=False)
 
