@@ -6,7 +6,7 @@ matplotlib
 seaborn
 jupyterlab
 joblib
-# streamlit  # Commented out for now; will add later when building the web app interface
+streamlit  # add at the deployment phase  2025.07.13 Amanda 
 
 # mithula-cbw
 prettytable
