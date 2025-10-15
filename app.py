@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import joblib
 
-# Page config for nicer UI
+
 st.set_page_config(
     page_title="Student Depression Predictor",
     page_icon="🧘‍♀️",
@@ -10,7 +10,7 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-# Custom CSS for nice fonts and shapes
+# CSS 
 st.markdown("""
     <style>
     .main-header {
@@ -191,9 +191,8 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
-# -------------------------------
+
 # Load model and encoders
-# -------------------------------
 @st.cache_resource
 def load_artifacts():
     model = joblib.load("models/Final/model_highrecall.pkl")
@@ -215,9 +214,8 @@ def load_artifacts():
 
 model, encoders, mean_cgpa = load_artifacts()
 
-# -------------------------------
+
 # Inference function
-# -------------------------------
 def predict_depression(features_df):
     features_df["cgpa"] = features_df["cgpa"].fillna(mean_cgpa)
     
@@ -240,26 +238,23 @@ def predict_depression(features_df):
     pred = 1 if prob > 0.5 else 0
     return pred, prob
 
-# -------------------------------
+
 # Header with Image
-# -------------------------------
 col1, col2, col3 = st.columns([1, 2, 1])
 with col2:
     st.markdown('<h1 class="main-header">🧘‍♀️ Student Depression Predictor</h1>', unsafe_allow_html=True)
     st.markdown('<p class="sub-header">Empowering Students for Better Mental Health</p>', unsafe_allow_html=True)
 
-# Header image (student studying/mental health theme)
+
 st.image("https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80", 
          caption="Stay balanced amidst the books 📚", use_container_width=True)
 
-# -------------------------------
-# Sidebar: Prevention Tips 
-# -------------------------------
 
+# Sidebar: Prevention Tips
 with st.sidebar:
     st.markdown("---")  
     
-    # Header with icon
+    
     st.markdown("""
     <div style="text-align: center; margin-bottom: 1rem;">
         <h2 style="color: #f7fafc; font-size: 1.4rem; margin: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
@@ -315,15 +310,14 @@ with st.sidebar:
     </div>
     """, unsafe_allow_html=True)
     
-   # Tip image
+ 
    
     st.image("https://images.unsplash.com/photo-1502082553048-f009c37129b9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80", 
          caption="Nature heals 🌿", width=250)
     st.markdown("---")  
 
-# -------------------------------
+
 # Main: User Input Form
-# -------------------------------
 st.header("❤️ Enter Your Details")
 with st.form("prediction_form", clear_on_submit=False):
     
@@ -385,22 +379,19 @@ with st.form("prediction_form", clear_on_submit=False):
 
        
         with st.container():
-                 # Use columns for centering: empty left/right, full center
             col1, col_center, col3 = st.columns([1, 2, 1])
     
             with col_center:
-                # Prediction message
                 if pred == 1:
                    st.error("🚨 **High Risk of Depression Detected**")
                 else:
                    st.success("✅ **Low Risk – Keep Up the Good Work!**")
         
-                # Centered image
                 st.image("https://cdn.tinybuddha.com/wp-content/uploads/2013/07/Meditating-1.jpg" if pred == 0 else "https://images.squarespace-cdn.com/content/v1/5ff99155fcd25633938f2b4d/1664901185117-21YWWBPHPPA9LLMSKG73/unsplash-image-LaMnXPLz7qc.jpg", 
                  caption="Seek support—you're not alone 💙" if pred == 1 else "You're thriving! 🌟", 
                  use_container_width=True)
         
-        # Centered metric
+    
         st.metric("Depression Risk Probability", f"{prob:.1%}")
 
         # Interpretation 
@@ -416,15 +407,13 @@ with st.form("prediction_form", clear_on_submit=False):
 st.markdown("---")
 
 
-col_left, col_right = st.columns([1, 1])  # Equal split
+col_left, col_right = st.columns([1, 1]) 
 
 with col_left:
-    # Contact image (left side, full height)
     st.image("https://images.unsplash.com/photo-1576092768241-dec231879fc3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80", 
              caption="Support is a call away 📞",use_container_width=True )
 
 with col_right:
-    # Contact card (right side)
     st.markdown("""
     <div class="contact-card">
         <div style="text-align: center; margin-bottom: 1rem;">
