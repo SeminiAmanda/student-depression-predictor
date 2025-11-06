@@ -1,15 +1,19 @@
-# Student Depression Predictor
-
-# 🧪 Run the Project using Docker
+# 🧘‍♀️ Student Depression Predictor
+This project uses a machine learning model to predict the risk of depression in students.
 ---
 
-__👋 Hey everyone!__
+**It's built with a robust MLOps pipeline using Docker Compose, which separates our project into two main services:**
+* `train` 🚂: A service for preprocessing data, training the model, and running tests.
+* `app` 🚀: A lightweight Streamlit app for production inference.
+---
+## 🚀 How to Run This Project
 
-**This guide explains how to run our project using Docker after cloning the repo. It will launch a preconfigured Python environment with all dependencies and scripts, so no local setup is needed.**
+### Prerequisites
+* [Git](https://git-scm.com/downloads)
+* [Docker Desktop](https://www.docker.com/products/docker-desktop/)
 
 ---
-
-## 📥 1. Clone the Repository
+## 📥 Clone the Repository
 
 ```bash
 git clone https://github.com/SeminiAmanda/student-depression-predictor
@@ -17,76 +21,82 @@ cd student-depression-predictor
 ```
 ---
 
-## 🐳 2. Build the Docker Image
+## Step 1: Train the Model 🚂
+Before we can run the app, we need to train our model. This command builds the `train` service and runs the preprocessing and training scripts.
 
 > ✅ Make sure Docker Desktop is installed and running.
 
-Docker Compose will handle building the image and creating necessary folders.
-Run this command to build (needed the first time, or when requirements.txt changes):
-
-
 ```bash
-docker-compose up --build
+docker-compose up --build train
 ```
-
----
-
-## ▶️ 3. Run the Project
-
-Start the container:
-
-
-```bash
-docker-compose up
-```
-
 This will:
 
-- Preprocess raw data if clean_data.csv is missing
-
-- Train models if they do not exist
-
-- Optionally run tests (RUN_TESTS=true)
-
-- Optionally start JupyterLab (RUN_JUPYTER=true)
-
-- Keep the container open for manual commands
-
-- By default, JupyterLab is skipped and tests are run.
-
+  1. Build the `Dockerfile.dev` image.
+  2. Run `src/preprocess.py` to create `clean_data.csv`.
+  3.  Run `src/train.py` to create all the model artifacts (.pkl files).
+  4. You will see all the new files appear in your local `./models/final` and `./Data/processed/final` folders.
 ---
 
-## 💡 Optional: Start JupyterLab
+## Step 2: Test the Model (Optional but Recommended) 🧪
+After training, you should validate your model's performance. You have two ways to do this:
 
-To run JupyterLab inside the container, set the environment variable:
+### **Method A: Run the test script manually (*✅ Recommended*)**  
+This is the fastest way to run only the tests. In your terminal, run:
+```bash
+docker-compose run train python src/test.py
+```
+
+### **Method B: Enable automatic testing**  
+You can also configure Docker Compose to run tests automatically every time you run the train service.  
+
+  1. Open your docker-compose.yml file.
+  2. Find the train service.
+  3. Change the environment variable RUN_TESTS=false to RUN_TESTS=true.
+
+## Step 3: Launch the Streamlit App 🚀
+Once your models are trained and tested, you're ready to launch the production application.
 
 ```bash
-export RUN_JUPYTER=true
-docker-compose up
-
+docker-compose up --build app
 ```
-## 🛑 To Stop the Container
->Press `Ctrl + C` in the running terminal, or use:
+> This builds the lightweight streamlit_app image, copies in the models you just trained, and starts the web server.
+
+✅ **You can now view the live application at:**  🔗 [http://localhost:8501](http://localhost:8501)
+
+## 🛑 How to Stop Everything
+To stop all running services (both the app and train), simply run:
+
+>Press `Ctrl + C` in the running terminals, or use:
 
 ```bash
 docker-compose down
 ```
 ---
 
-## 🔧 Optional: Run Scripts Manually
+## 🔧 Developer Guide (Advanced)
+### **Run JupyterLab**
+The `train` service has JupyterLab installed for data exploration.
 
-Once inside the container (bash shell):
+  1. Open the `docker-compose.yml` file.
+
+  2. Find the `train` service.
+
+  3. Change the environment variable `RUN_JUPYTER=false` to `RUN_JUPYTER=true`.
+
+  4. Run `docker-compose up train`. The terminal will provide a link to open JupyterLab in your browser.
+
+### Run Scripts Manually
+You can get a `bash` shell inside the train container to run any command you want.
 
 ```bash
-# Preprocess data
-python src/preprocess.py
-
-# Train models
-python src/train.py
-
-# Run tests
-python src/test.py
-
+docker-compose run train bash
 ```
-> This is useful if you want to rerun a specific step without rebuilding the container.
----
+
+> Once inside the container's shell, you can run scripts individually:
+
+```bash
+# (You are now inside the container)
+python src/preprocess.py
+python src/train.py
+python src/test.py
+```
