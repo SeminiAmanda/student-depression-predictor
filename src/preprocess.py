@@ -1,7 +1,3 @@
-# =====================================
-# preprocess.py
-# =====================================
-
 # Load libraries
 import pandas as pd
 import numpy as np
@@ -13,14 +9,10 @@ df = pd.read_csv("./Data/raw/student_depression_dataset.csv")
 # Clean column names
 df.columns = [col.strip().lower().replace(" ", "_").replace("/", "_").replace("?", "").rstrip("_") for col in df.columns]
 
-# =====================================
 # Drop unnecessary columns
-# =====================================
 df.drop(['id', 'work_pressure', 'job_satisfaction', 'profession', 'city'], axis=1, inplace=True)
 
-# =====================================
 # Column Type Categorization
-# =====================================
 num_cols = ['age', 'academic_pressure', 'cgpa', 'financial_stress',
             'study_satisfaction', 'work_study_hours']
 
@@ -34,20 +26,17 @@ ordinal_cols = ['degree', 'sleep_duration']
 for col in nominal_cat_cols:
     df[col] = df[col].astype('category')
 
-# =====================================
 # Handle missing or invalid values
-# =====================================
 # Convert to object before replacing to avoid FutureWarning
 df['sleep_duration'] = df['sleep_duration'].astype(object).replace('Others', np.nan)
 df['dietary_habits'] = df['dietary_habits'].astype(object).replace('Others', np.nan)
 df['financial_stress'] = pd.to_numeric(df['financial_stress'].replace('?', np.nan), errors='coerce')
 
 # Drop rows with any remaining missing values
-df_cleaned = df.dropna().copy()  # copy to avoid SettingWithCopyWarning
+df_cleaned = df.dropna().copy()
 
-# =====================================
 # Ordinal Categorical Encoding
-# =====================================
+
 # Encode 'degree'
 df_cleaned.loc[:, 'degree'] = df_cleaned['degree'].str.strip().str.strip("'\"")
 degree_encoding = {
@@ -77,21 +66,18 @@ df_encoded = df_cleaned.drop(['degree', 'sleep_duration'], axis=1).copy()
 # Add encoded columns to numerical features
 num_cols.extend(['degree_encoded', 'sleep_duration_encoded'])
 
-# =====================================
 # CGPA Conversion
-# =====================================
+
 # Convert CGPA from 0–10 scale to 0–4 scale
 df_encoded.loc[:, 'cgpa'] = df_encoded['cgpa'] * (4 / 10)
 df_encoded.loc[:, 'cgpa'] = df_encoded['cgpa'].round(2)
 
 # Replace 0 with NaN to mark as missing
-# 🧠 Imputation of missing CGPA values will be done after splitting to avoid data leakage
 df_encoded.loc[:, 'cgpa'] = df_encoded['cgpa'].replace(0, np.nan)
 
-# =====================================
 # Save cleaned data
-# =====================================
-output_dir = "Data/processed/Final"
+
+output_dir = "Data/processed/final"
 os.makedirs(output_dir, exist_ok=True)
 df_encoded.to_csv(f"{output_dir}/clean_data.csv", index=False)
 

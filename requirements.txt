@@ -1,12 +1,6 @@
-numpy
-pandas
-scikit-learn
-xgboost # mithula-cbw 2025.07.13
-matplotlib
-seaborn
-jupyterlab
-joblib
-streamlit  # add at the deployment phase  2025.07.13 Amanda 
-
-# mithula-cbw
-prettytable
+numpy==1.26.4
+pandas==2.2.2
+scikit-learn==1.5.0
+xgboost==2.0.3 # mithula-cbw 2025.07.13
+joblib==1.4.2
+streamlit==1.35.0 # add at the deployment phase  2025.07.13 Amanda 

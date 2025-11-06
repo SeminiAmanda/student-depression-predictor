@@ -1,0 +1,21 @@
+FROM python:3.11-slim
+
+WORKDIR /app
+
+# Install all dependencies (base + dev)
+COPY requirements.txt requirements-dev.txt ./
+RUN pip install --no-cache-dir -r requirements-dev.txt
+
+# Copy all project files for development
+COPY . .
+
+# Environment variables
+ENV RUN_JUPYTER=false \
+    RUN_TESTS=false
+
+CMD ["bash", "-c", "\
+if [ ! -f Data/processed/final/clean_data.csv ]; then python src/preprocess.py; fi && \
+if [ ! -f models/final/model_highrecall.pkl ]; then python src/train.py; fi && \
+if [ \"$RUN_TESTS\" = \"true\" ]; then python src/test.py; fi && \
+if [ \"$RUN_JUPYTER\" = \"true\" ]; then jupyter-lab --ip=0.0.0.0 --allow-root --no-browser; fi && \
+exec bash"]

@@ -1,0 +1,5 @@
+-r requirements.txt
+prettytable==3.10.0
+matplotlib==3.8.4
+seaborn==0.13.2
+jupyterlab==4.2.1

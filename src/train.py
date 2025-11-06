@@ -6,20 +6,14 @@ from xgboost import XGBClassifier
 import joblib
 import os
 
-# -------------------------------
-# Load preprocessed data
-# -------------------------------
+# Load data
 df = pd.read_csv("Data/processed/final/clean_data.csv")
 
-# -------------------------------
 # Separate features and target
-# -------------------------------
 X = df.drop("depression", axis=1)
 y = df["depression"]
 
-# -------------------------------
-# Stratified train-test split
-# -------------------------------
+# Split data
 X_train, X_test, y_train, y_test = train_test_split(
     X, y, test_size=0.2, random_state=42, stratify=y
 )
@@ -28,17 +22,12 @@ os.makedirs("Data/processed/final", exist_ok=True)
 X_test.to_csv("Data/processed/final/X_test.csv", index=False)
 y_test.to_csv("Data/processed/final/y_test.csv", index=False)
 
-
-# -------------------------------
-# Impute missing CGPA using training set mean
-# -------------------------------
+# Impute CGPA
 mean_cgpa = X_train["cgpa"].mean()
 X_train["cgpa"] = X_train["cgpa"].fillna(mean_cgpa)
 X_test["cgpa"] = X_test["cgpa"].fillna(mean_cgpa)
 
-# -------------------------------
 # Encode categorical variables
-# -------------------------------
 categorical_columns = [
     "gender",
     "dietary_habits",
@@ -56,12 +45,14 @@ for col in categorical_columns:
 X_train.drop(columns=categorical_columns, inplace=True)
 X_test.drop(columns=categorical_columns, inplace=True)
 
-# Ensure model folder exists
-os.makedirs("models/Final", exist_ok=True)
+# Save preprocessing artifacts
+os.makedirs("models/final/artifacts", exist_ok=True)
+joblib.dump(mean_cgpa, "models/final/artifacts/mean_cgpa.pkl")
 
-# -------------------------------
-# Phase 2: Tree structure tuning
-# -------------------------------
+final_features = X_train.columns.tolist()
+joblib.dump(final_features, "models/final/artifacts/final_features.pkl")
+
+# Define model parameters
 phase2_params = {
     "objective": "binary:logistic",
     "eval_metric": ["auc", "logloss"],
@@ -78,16 +69,12 @@ phase2_params = {
     "gamma": 0.5
 }
 
+# Train and save balanced model
 phase2_model = XGBClassifier(**phase2_params)
 phase2_model.fit(X_train, y_train)
+joblib.dump(phase2_model, "models/final/model_balanced.pkl")
 
-# Save Phase 2 model
-joblib.dump(phase2_model, "models/Final/model_balanced.pkl")
-print("✅ Phase 2 model saved")
-
-# -------------------------------
-# Phase 3: Sampling / overfitting control
-# -------------------------------
+# Define high-recall parameters
 phase3_params = {
     **phase2_params,
     "subsample": 0.9,
@@ -95,17 +82,12 @@ phase3_params = {
     "scale_pos_weight": 3.0,
 }
 
+# Train and save high-recall model
 phase3_model = XGBClassifier(**phase3_params)
 phase3_model.fit(X_train, y_train)
+joblib.dump(phase3_model, "models/final/model_highrecall.pkl")
 
-# Save Phase 3 model
-joblib.dump(phase3_model, "models/Final/model_highrecall.pkl")
-print("✅ Phase 3 model saved")
-
-# -------------------------------
-# Save LabelEncoders for inference
-# -------------------------------
-os.makedirs("models/Final/encoders", exist_ok=True)
+# Save encoders
+os.makedirs("models/final/encoders", exist_ok=True)
 for col, le in label_encoders.items():
-    joblib.dump(le, f"models/Final/encoders/{col}_encoder.pkl")
-print("✅ Label encoders saved")
+    joblib.dump(le, f"models/final/encoders/{col}_encoder.pkl")

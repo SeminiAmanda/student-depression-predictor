@@ -1,12 +1,25 @@
-version: '3'
 services:
-  ml-project:
-    build: .
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: streamlit_app
     ports:
-      - "8888:8888"   # optional Jupyter Lab port
-    volumes:
-      - .:/app        # mount project folder
-    working_dir: /app
+      - "8501:8501"
     environment:
-      RUN_JUPYTER: "false"  # default: skip Jupyter Lab
-      RUN_TESTS: "true"     # run tests by default
+      - STREAMLIT_SERVER_HEADLESS=true
+    restart: unless-stopped
+
+  train:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    container_name: ml_training
+    volumes:
+      - ./models:/app/models
+      - ./Data:/app/Data
+      - ./src:/app/src
+    environment:
+      - RUN_TESTS=false
+      - RUN_JUPYTER=false
+    tty: true
