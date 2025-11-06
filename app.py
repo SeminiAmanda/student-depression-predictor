@@ -195,10 +195,10 @@ st.markdown("""
 # Load model and encoders
 @st.cache_resource
 def load_artifacts():
-    model = joblib.load("models/Final/model_highrecall.pkl")
+    model = joblib.load("models/final/model_highrecall.pkl")
     
     encoders = {
-        col: joblib.load(f"models/Final/encoders/{col}_encoder.pkl")
+        col: joblib.load(f"models/final/encoders/{col}_encoder.pkl")
         for col in [
             "gender",
             "dietary_habits",
@@ -207,12 +207,13 @@ def load_artifacts():
         ]
     }
     
-    train_df = pd.read_csv("Data/processed/final/clean_data.csv")
-    mean_cgpa = train_df["cgpa"].mean()
+    # Load from saved artifacts.
+    mean_cgpa = joblib.load("models/final/artifacts/mean_cgpa.pkl")
+    final_features = joblib.load("models/final/artifacts/final_features.pkl")
     
-    return model, encoders, mean_cgpa
+    return model, encoders, mean_cgpa, final_features
 
-model, encoders, mean_cgpa = load_artifacts()
+model, encoders, mean_cgpa, final_features = load_artifacts()
 
 
 # Inference function
@@ -225,19 +226,22 @@ def predict_depression(features_df):
         "family_history_of_mental_illness",
         "have_you_ever_had_suicidal_thoughts",
     ]
+
     for col in categorical_columns:
         if col in features_df.columns:
             le = encoders[col]
             try:
                 features_df[col + "_encoded"] = le.transform(features_df[col])
             except ValueError:
-                features_df[col + "_encoded"] = 0
+                features_df[col + "_encoded"] = -1 
             features_df.drop(columns=[col], inplace=True)
+    
+    features_df = features_df.reindex(columns=final_features)
+    features_df = features_df.fillna(0)
     
     prob = model.predict_proba(features_df)[0][1]
     pred = 1 if prob > 0.5 else 0
     return pred, prob
-
 
 # Header with Image
 col1, col2, col3 = st.columns([1, 2, 1])
@@ -247,7 +251,7 @@ with col2:
 
 
 st.image("https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80", 
-         caption="Stay balanced amidst the books 📚", use_container_width=True)
+         caption="Stay balanced amidst the books 📚")
 
 
 # Sidebar: Prevention Tips
@@ -351,7 +355,7 @@ with st.form("prediction_form", clear_on_submit=False):
         family_history = st.selectbox("Family History of Mental Illness", ["Yes", "No"])
         suicidal_thoughts = st.selectbox("Ever Had Suicidal Thoughts", ["Yes", "No"])
     
-    submit = st.form_submit_button("🔮 Predict My Risk", use_container_width=True)
+    submit = st.form_submit_button("🔮 Predict My Risk")
     
     if submit:
         input_data = {
@@ -388,8 +392,7 @@ with st.form("prediction_form", clear_on_submit=False):
                    st.success("✅ **Low Risk – Keep Up the Good Work!**")
         
                 st.image("https://cdn.tinybuddha.com/wp-content/uploads/2013/07/Meditating-1.jpg" if pred == 0 else "https://images.squarespace-cdn.com/content/v1/5ff99155fcd25633938f2b4d/1664901185117-21YWWBPHPPA9LLMSKG73/unsplash-image-LaMnXPLz7qc.jpg", 
-                 caption="Seek support—you're not alone 💙" if pred == 1 else "You're thriving! 🌟", 
-                 use_container_width=True)
+                 caption="Seek support—you're not alone 💙" if pred == 1 else "You're thriving! 🌟")
         
     
         st.metric("Depression Risk Probability", f"{prob:.1%}")
@@ -411,7 +414,7 @@ col_left, col_right = st.columns([1, 1])
 
 with col_left:
     st.image("https://images.unsplash.com/photo-1576092768241-dec231879fc3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80", 
-             caption="Support is a call away 📞",use_container_width=True )
+             caption="Support is a call away 📞")
 
 with col_right:
     st.markdown("""

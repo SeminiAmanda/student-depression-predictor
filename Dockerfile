@@ -1,34 +1,22 @@
-FROM python:3.13-slim
+FROM python:3.11-slim
 
 WORKDIR /app
 
-# Copy requirements and install
+# Install dependencies
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy project files
-COPY . .
+# Copy the necessary files
+COPY app.py .
 
-# Create necessary directories upfront
-RUN mkdir -p Data/processed/final models/Final models/Final/encoders
+# Copy all models, encoders, and artifacts
+COPY models/ ./models/
 
-# Default command
-CMD ["bash", "-c", "\
-# 1️⃣ Preprocess if needed \
-if [ ! -f Data/processed/final/clean_data.csv ]; then \
-    python src/preprocess.py; \
-fi && \
-# 2️⃣ Train if models missing \
-if [ ! -f models/Final/model_highrecall.pkl ]; then \
-    python src/train.py; \
-fi && \
-# 3️⃣ Run tests if RUN_TESTS=true \
-if [ \"$RUN_TESTS\" = \"true\" ]; then \
-    python src/test.py; \
-fi && \
-# 4️⃣ Start Jupyter Lab if RUN_JUPYTER=true \
-if [ \"$RUN_JUPYTER\" = \"true\" ]; then \
-    jupyter-lab --ip=0.0.0.0 --allow-root --no-browser; \
-fi && \
-# Keep bash open \
-exec bash"]
+EXPOSE 8501
+
+# Streamlit config
+ENV STREAMLIT_SERVER_HEADLESS=true \
+    STREAMLIT_SERVER_ENABLECORS=false \
+    STREAMLIT_SERVER_PORT=8501
+
+CMD ["streamlit", "run", "app.py"]
