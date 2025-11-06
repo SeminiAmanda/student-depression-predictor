@@ -20,6 +20,6 @@ services:
       - ./Data:/app/Data
       - ./src:/app/src
     environment:
-      - RUN_TESTS=true
+      - RUN_TESTS=false
       - RUN_JUPYTER=false
     tty: true
